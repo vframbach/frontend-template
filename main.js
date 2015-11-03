@@ -103,9 +103,13 @@ function buildGithubLink (studentNum) {
 	var getGitHub = data["students"][studentNum]["github_username"];
 	$(".title").append("<br><a href='https://github.com/"+getGitHub+"'>"+getFullName+"</a>");
 }
-for (var i = 0; i < data["students"].length; i++) {
-	buildGithubLink(i);
+
+function renderGithubLinks () {
+	for (var i = 0; i < data["students"].length; i++) {
+		buildGithubLink(i);
+	}	
 }
-// buildGithubLink(12);
+renderGithubLinks();
+
 
 });
